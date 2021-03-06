@@ -1,4 +1,6 @@
 import os
+import sys
+sys.path.insert(0,'/home/furnixsp/home/trulinews/Templates')
 
 from flask import Flask, request, render_template, redirect, url_for
 
