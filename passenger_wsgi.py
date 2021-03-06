@@ -13,5 +13,6 @@ app = Flask(__name__,template_folder=template_path)
 def home():
     return render_template("index.html")
 
-if __name__=="__main__":
-	app.run()
+application = app
+# if __name__=="__main__":
+# 	app.run()
