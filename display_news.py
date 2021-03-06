@@ -11,8 +11,8 @@ app = Flask(__name__,template_folder=template_path)
 
 @app.route('/')
 def home():
-    return render_template("news_template.html")
+    return render_template("news_template.html",image_path="static/images/background_urban.png")
 
-# application = app
+application = app
 if __name__=="__main__":
 	app.run()
