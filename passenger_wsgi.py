@@ -1,6 +1,6 @@
 import os
 import sys
-sys.path.insert(0,'/home/furnixsp/home/trulinews/Templates')
+sys.path.insert(0,'/home/furnixsp/home/trulinews/Templates/')
 
 from flask import Flask, request, render_template, redirect, url_for
 
@@ -11,7 +11,7 @@ app = Flask(__name__, template_folder=template_path, static_folder=static_path)
 
 @app.route('/')
 def home():
-    return render_template("index.html")
+    return render_template("index.html", **locals())
 
 
 application = app
