@@ -11,7 +11,7 @@ app = Flask(__name__, template_folder=template_path, static_folder=static_path)
 
 @app.route('/')
 def home():
-    return render_template("index.html", **locals())
+    return render_template("Home.html", **locals())
 
 
 application = app
