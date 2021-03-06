@@ -9,9 +9,30 @@ template_path = os.path.join(project_root, 'Templates')
 # static_path = os.path.join(project_root, 'static')
 app = Flask(__name__,template_folder=template_path)
 
-@app.route('/')
+"""
+main_image
+kws
+title
+abstract
+link
+sentiment
+media bias score
+source
+similarity
+"""
+
+@app.route('/Story1')
 def home():
-    return render_template("news_template.html",image_path="static/images/background_urban.png")
+	# send_dict = get_cs(story_num)
+	send_dict  = {"main_image":"static/images/blueprint.jpg",
+	"title":"Trump Bombs Iran",
+	"abstract":"President Trump bombs Iran.","header":"mediabias,source,similarity,sentiment",
+	"link":"https://www.google.com",
+	"kws":"Trump, Iran"}
+	return render_template("news_template.html",send_dict=send_dict)
+
+
+
 
 application = app
 if __name__=="__main__":
