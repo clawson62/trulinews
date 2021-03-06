@@ -29,7 +29,7 @@ def home():
 	"abstract":"President Trump bombs Iran.","header":"mediabias,source,similarity,sentiment",
 	"link":"https://www.google.com",
 	"kws":"Trump, Iran"}
-	return render_template("news_template.html",send_dict=send_dict)
+	return render_template("../trulinews.com/Templates/news_template.html",send_dict=send_dict)
 
 
 
