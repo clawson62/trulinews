@@ -1,4 +1,4 @@
-def run(background, filename):
+def run(background, news):
     import pandas as pd
     import os, os.path
     import re
@@ -24,9 +24,9 @@ def run(background, filename):
     news_ref = news_ref.head(1000)
 
     # get the API-obtained news articles (here it's just kaggle)
-    news = pd.read_csv(filename)
-    news = news.rename(columns={"content":'text'})
-    news = news.head(10)
+#     news = pd.read_csv(filename)
+#     news = news.rename(columns={"content":'text'})
+#     news = news.head(10)
 
     # get the word count for each article
     news_ref['word_count'] = news_ref['text'].apply(lambda x: len(x.split(" ")))
@@ -118,7 +118,7 @@ def run(background, filename):
         return [words, confs]
 
     # set number of articles
-    n_articles = 10
+    n_articles = len(news)
 
     # set number of keywords
     n_keywords = 5

@@ -1,0 +1,27 @@
+names,bias,reliability,category
+The Huffington Post,-13.66,39.39,-2
+MSNBC,-16.01,43.84,-2
+Newsweek,-12.62,38.37,-2
+CNN,-9.95,43.73,-1
+Reuters,-7.54,49.39,-1
+Politico,-7.88,45.03,-1
+NBC,-8.5,46.47,-1
+Bloomberg,-3.71,46.26,-1
+The Washington Post,-10.58,43.53,-1
+USA Today,-5.22,46.02,0
+Associated Press,-2.36,51.23,0
+The Hill,0.09,44.75,0
+CBS News,-3.38,49.48,0
+ABC News,-4.57,48.62,0
+Al Jazeera English,-8.66,46.06,0
+BBC News,-6.35,43.75,0
+Axios,-9.34,44.29,0
+Ars Technica,-0.76,46.1,0
+Fortune,3.5,45.81,1
+The Washington Times,15.0,24.3,1
+Business Insider,2.42,41.22,1
+The Globe and Mail,-4.92,46.36,1
+The Wall Street Journal,3.38,47.45,1
+The American Conservative,13.59,31.15,2
+Fox News,16.8,30.14,2
+National Review,18.09,30.7,2

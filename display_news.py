@@ -5,9 +5,9 @@ from flask import Flask, request, render_template, redirect, url_for
 
 project_root = os.path.dirname(os.path.realpath('__file__'))
 # print(os.path.realpath('__file__'))
-template_path = os.path.join(project_root, '../trulinews.com/Templates')
-static_path = os.path.join(project_root, '../trulinews.com/static')
-app = Flask(__name__,template_folder=template_path,static_folder=static_path)
+# template_path = os.path.join(project_root, 'templates')
+# static_path = os.path.join(project_root, '../trulinews.com/static')
+app = Flask(__name__)
 
 """
 main_image
@@ -26,10 +26,14 @@ def home():
 	# send_dict = get_cs(story_num)
 	send_dict  = {"main_image":"static/images/blueprint.jpg",
 	"title":"Trump Bombs Iran",
-	"abstract":"President Trump bombs Iran.","header":"mediabias,source,similarity,sentiment",
+	"abstract":"President Trump bombs Iran.",
+	"mediabias":"static/images/im1.png",
+	"similarity":"static/images/im2.jpg",
+	"sentiment":"static/images/im3.jpg",
+	"source":"CNN",
 	"link":"https://www.google.com",
 	"kws":"Trump, Iran"}
-	return render_template("../trulinews.com/Templates/news_template.html",send_dict=send_dict)
+	return render_template("news_template.html",send_dict=send_dict)
 
 
 
