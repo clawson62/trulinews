@@ -50,6 +50,23 @@ section{
   padding-bottom:: 20px;
 }
 
+#rb-menu-com li .submenu div p {
+    color:#fff;
+    margin: 0;
+    padding:0;
+    width:100%;
+    position: relative;
+}
+
+#p_tag{
+  padding-right: 300px;
+  padding-left: 300px;
+
+}
+
+p { word-break: break-all;
+white-space: normal; }
+
 </style>
 
 </head>
@@ -59,22 +76,19 @@ section{
 <img src= "static/images/TruliLogoclipped1.png" class="card-img-top" alt="..." width="180" height="75">
 
 <section>
-<h1 style="font-family: HP Simplified Light" class="card-title">Top Stories Relating To {{send_dict[0]["kws"]}}</h1>
+<h1 style="font-family: HP Simplified Light" class="card-title">Top Stories Relating To: {{kwds}}</h1>
 <section>
 
 <section>
   <div class="card w-75">
-    <img src= {{send_dict[1]["main_image"]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
+    <img src= {{show_images[0]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
     <div class="card-body">
-      <img src={{send_dict[1]["mediabias"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[1]["similarity"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[1]["sentiment"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
+      <img src={{media_bias_path[0]}} id="br_small" class="thumbnail" alt="..." width="120" height="80">
       
-      <h2 style="font-family: HP Simplified Light" class="card-title">{{send_dict[1]["source"]}} - {{send_dict[1]["title"]}}</h2>
-      <p style="font-family: HP Simplified Light" class="card-text">{{send_dict[1]["abstract"]}}</p>
+      <h2 wrap="hard" style="font-family: HP Simplified Light" class="card-title">{{send_dict["name"]["0"]}} - {{send_dict["title"]["0"]}}</h2>
     </div>
     <div class="card-body">
-      <a style="font-family: HP Simplified Light" href={{send_dict[1]["link"]}} class="card-link">Learn more here</a>
+      <a style="font-family: HP Simplified Light" href={{send_dict["url"]["0"]}} class="card-link">Learn more here</a>
     </div>
   </div>
 <section class="pad_">
@@ -95,17 +109,149 @@ section{
 
 <section>
   <div class="card w-75">
-    <img src= {{send_dict[2]["main_image"]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
+    <img src= {{show_images[1]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
     <div class="card-body">
-      <img src={{send_dict[2]["mediabias"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[2]["similarity"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[2]["sentiment"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
+      <img src={{media_bias_path[1]}} id="br_small" class="thumbnail" alt="..." width="120" height="80">
       
-      <h2 style="font-family: HP Simplified Light" class="card-title">{{send_dict[2]["source"]}} - {{send_dict[2]["title"]}}</h2>
-      <p style="font-family: HP Simplified Light" class="card-text">{{send_dict[2]["abstract"]}}</p>
+      <h2 wrap="hard" style="font-family: HP Simplified Light" class="card-title">{{send_dict["name"]["1"]}} - {{send_dict["title"]["1"]}}</h2>
     </div>
     <div class="card-body">
-      <a style="font-family: HP Simplified Light" href={{send_dict[2]["link"]}} class="card-link">Learn more here</a>
+      <a style="font-family: HP Simplified Light" href={{send_dict["url"]["1"]}} class="card-link">Learn more here</a>
+    </div>
+  </div>
+<section class="pad_">
+
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+
+<section>
+  <div class="card w-75">
+    <img src= {{show_images[2]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
+    <div class="card-body">
+      <img src={{media_bias_path[2]}} id="br_small" class="thumbnail" alt="..." width="120" height="80">
+      
+      <h2 wrap="hard" style="font-family: HP Simplified Light" class="card-title">{{send_dict["name"]["2"]}} - {{send_dict["title"]["2"]}}</h2>
+    </div>
+    <div class="card-body">
+      <a style="font-family: HP Simplified Light" href={{send_dict["url"]["2"]}} class="card-link">Learn more here</a>
+    </div>
+  </div>
+<section class="pad_">
+
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+
+<section>
+  <div class="card w-75">
+    <img src= {{show_images[3]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
+    <div class="card-body">
+      <img src={{media_bias_path[3]}} id="br_small" class="thumbnail" alt="..." width="120" height="80">
+      
+      <h2 wrap="hard" style="font-family: HP Simplified Light" class="card-title">{{send_dict["name"]["3"]}} - {{send_dict["title"]["3"]}}</h2>
+    </div>
+    <div class="card-body">
+      <a style="font-family: HP Simplified Light" href={{send_dict["url"]["3"]}} class="card-link">Learn more here</a>
+    </div>
+  </div>
+<section class="pad_">
+
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+
+<section>
+  <div class="card w-75">
+    <img src= {{show_images[4]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
+    <div class="card-body">
+      <img src={{media_bias_path[4]}} id="br_small" class="thumbnail" alt="..." width="120" height="80">
+      
+      <h2 wrap="hard" style="font-family: HP Simplified Light" class="card-title">{{send_dict["name"]["4"]}} - {{send_dict["title"]["4"]}}</h2>
+    </div>
+    <div class="card-body">
+      <a style="font-family: HP Simplified Light" href={{send_dict["url"]["4"]}} class="card-link">Learn more here</a>
+    </div>
+  </div>
+<section class="pad_">
+
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+
+<section>
+  <div class="card w-75">
+    <img src= {{show_images[5]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
+    <div class="card-body">
+      <img src={{media_bias_path[5]}} id="br_small" class="thumbnail" alt="..." width="120" height="80">
+      
+      <h2 wrap="hard" style="font-family: HP Simplified Light" class="card-title">{{send_dict["name"]["5"]}} - {{send_dict["title"]["5"]}}</h2>
+    </div>
+    <div class="card-body">
+      <a style="font-family: HP Simplified Light" href={{send_dict["url"]["5"]}} class="card-link">Learn more here</a>
+    </div>
+  </div>
+<section class="pad_">
+
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+<div> 
+  <p id="pad_" class="card-text"></p>
+</div>
+
+<section>
+  <div class="card w-75">
+    <img src= {{show_images[6]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
+    <div class="card-body">
+      <img src={{media_bias_path[6]}} id="br_small" class="thumbnail" alt="..." width="120" height="80">
+      
+      <h2 wrap="hard" style="font-family: HP Simplified Light" class="card-title">{{send_dict["name"]["6"]}} - {{send_dict["title"]["6"]}}</h2>
+    </div>
+    <div class="card-body">
+      <a style="font-family: HP Simplified Light" href={{send_dict["url"]["6"]}} class="card-link">Learn more here</a>
     </div>
   </div>
 <section class="pad_">
@@ -126,17 +272,14 @@ section{
 
 <section>
   <div class="card w-75">
-    <img src= {{send_dict[3]["main_image"]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
+    <img src= {{show_images[7]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
     <div class="card-body">
-      <img src={{send_dict[3]["mediabias"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[3]["similarity"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[3]["sentiment"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
+      <img src={{media_bias_path[7]}} id="br_small" class="thumbnail" alt="..." width="120" height="80">
       
-      <h2 style="font-family: HP Simplified Light" class="card-title">{{send_dict[3]["source"]}} - {{send_dict[3]["title"]}}</h2>
-      <p style="font-family: HP Simplified Light" class="card-text">{{send_dict[3]["abstract"]}}</p>
+      <h2 wrap="hard" style="font-family: HP Simplified Light" class="card-title">{{send_dict["name"]["7"]}} - {{send_dict["title"]["7"]}}</h2>
     </div>
     <div class="card-body">
-      <a style="font-family: HP Simplified Light" href={{send_dict[3]["link"]}} class="card-link">Learn more here</a>
+      <a style="font-family: HP Simplified Light" href={{send_dict["url"]["7"]}} class="card-link">Learn more here</a>
     </div>
   </div>
 <section class="pad_">
@@ -156,17 +299,14 @@ section{
 
 <section>
   <div class="card w-75">
-    <img src= {{send_dict[4]["main_image"]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
+    <img src= {{show_images[8]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
     <div class="card-body">
-      <img src={{send_dict[4]["mediabias"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[4]["similarity"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[4]["sentiment"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
+      <img src={{media_bias_path[8]}} id="br_small" class="thumbnail" alt="" width="120" height="80">
       
-      <h2 style="font-family: HP Simplified Light" class="card-title">{{send_dict[4]["source"]}} - {{send_dict[4]["title"]}}</h2>
-      <p style="font-family: HP Simplified Light" class="card-text">{{send_dict[4]["abstract"]}}</p>
+      <h2 wrap="hard" style="font-family: HP Simplified Light" class="card-title">{{send_dict["name"]["8"]}} - {{send_dict["title"]["8"]}}</h2>
     </div>
     <div class="card-body">
-      <a style="font-family: HP Simplified Light" href={{send_dict[4]["link"]}} class="card-link">Learn more here</a>
+      <a style="font-family: HP Simplified Light" href={{send_dict["url"]["8"]}} class="card-link">Learn more here</a>
     </div>
   </div>
 <section class="pad_">
@@ -183,143 +323,6 @@ section{
 <div> 
   <p id="pad_" class="card-text"></p>
 </div>
-
-<section>
-  <div class="card w-75">
-    <img src= {{send_dict[5]["main_image"]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
-    <div class="card-body">
-      <img src={{send_dict[5]["mediabias"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[5]["similarity"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[5]["sentiment"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      
-      <h2 style="font-family: HP Simplified Light" class="card-title">{{send_dict[5]["source"]}} - {{send_dict[5]["title"]}}</h2>
-      <p style="font-family: HP Simplified Light" class="card-text">{{send_dict[5]["abstract"]}}</p>
-    </div>
-    <div class="card-body">
-      <a style="font-family: HP Simplified Light" href={{send_dict[5]["link"]}} class="card-link">Learn more here</a>
-    </div>
-  </div>
-<section class="pad_">
-
-<div> 
-  <p id="pad_" class="card-text"></p>
-</div>
-<div> 
-  <p id="pad_" class="card-text"></p>
-</div>
-<div> 
-  <p id="pad_" class="card-text"></p>
-</div>
-<div> 
-  <p id="pad_" class="card-text"></p>
-</div>
-
-<section>
-  <div class="card w-75">
-    <img src= {{send_dict[6]["main_image"]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
-    <div class="card-body">
-      <img src={{send_dict[6]["mediabias"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[6]["similarity"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[6]["sentiment"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      
-      <h2 style="font-family: HP Simplified Light" class="card-title">{{send_dict[6]["source"]}} - {{send_dict[6]["title"]}}</h2>
-      <p style="font-family: HP Simplified Light" class="card-text">{{send_dict[6]["abstract"]}}</p>
-    </div>
-    <div class="card-body">
-      <a style="font-family: HP Simplified Light" href={{send_dict[6]["link"]}} class="card-link">Learn more here</a>
-    </div>
-  </div>
-<section class="pad_">
-
-<div> 
-  <p id="pad_" class="card-text"></p>
-</div>
-<div> 
-  <p id="pad_" class="card-text"></p>
-</div>
-<div> 
-  <p id="pad_" class="card-text"></p>
-</div>
-<div> 
-  <p id="pad_" class="card-text"></p>
-</div>
-
-<section>
-  <div class="card w-75">
-    <img src= {{send_dict[7]["main_image"]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
-    <div class="card-body">
-      <img src={{send_dict[7]["mediabias"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[7]["similarity"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[7]["sentiment"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      
-      <h2 style="font-family: HP Simplified Light" class="card-title">{{send_dict[7]["source"]}} - {{send_dict[7]["title"]}}</h2>
-      <p style="font-family: HP Simplified Light" class="card-text">{{send_dict[7]["abstract"]}}</p>
-    </div>
-    <div class="card-body">
-      <a style="font-family: HP Simplified Light" href={{send_dict[7]["link"]}} class="card-link">Learn more here</a>
-    </div>
-  </div>
-<section class="pad_">
-
-<div> 
-  <p id="pad_" class="card-text"></p>
-</div>
-<div> 
-  <p id="pad_" class="card-text"></p>
-</div>
-<div> 
-  <p id="pad_" class="card-text"></p>
-</div>
-<div> 
-  <p id="pad_" class="card-text"></p>
-</div>
-
-<section>
-  <div class="card w-75">
-    <img src= {{send_dict[8]["main_image"]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
-    <div class="card-body">
-      <img src={{send_dict[8]["mediabias"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[8]["similarity"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[8]["sentiment"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      
-      <h2 style="font-family: HP Simplified Light" class="card-title">{{send_dict[8]["source"]}} - {{send_dict[8]["title"]}}</h2>
-      <p style="font-family: HP Simplified Light" class="card-text">{{send_dict[8]["abstract"]}}</p>
-    </div>
-    <div class="card-body">
-      <a style="font-family: HP Simplified Light" href={{send_dict[8]["link"]}} class="card-link">Learn more here</a>
-    </div>
-  </div>
-<section class="pad_">
-
-<div> 
-  <p id="pad_" class="card-text"></p>
-</div>
-<div> 
-  <p id="pad_" class="card-text"></p>
-</div>
-<div> 
-  <p id="pad_" class="card-text"></p>
-</div>
-<div> 
-  <p id="pad_" class="card-text"></p>
-</div>
-
-<section>
-  <div class="card w-75">
-    <img src= {{send_dict[9]["main_image"]}} id="br_main" class="card-img-top" alt="..." width="750" height="200">
-    <div class="card-body">
-      <img src={{send_dict[9]["mediabias"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[9]["similarity"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      <img src={{send_dict[9]["sentiment"]}} id="br_small" class="thumbnail" alt="..." width="80" height="50">
-      
-      <h2 style="font-family: HP Simplified Light" class="card-title">{{send_dict[9]["source"]}} - {{send_dict[9]["title"]}}</h2>
-      <p style="font-family: HP Simplified Light" class="card-text">{{send_dict[9]["abstract"]}}</p>
-    </div>
-    <div class="card-body">
-      <a style="font-family: HP Simplified Light" href={{send_dict[9]["link"]}} class="card-link">Learn more here</a>
-    </div>
-  </div>
-<section class="pad_">
 
 </body>
 </html>
